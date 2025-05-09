@@ -42,9 +42,10 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-      - name: Debug NOTION_PAGE
+      - name: Debug NOTION_PAGE and duplicated_template_id
         run: |
           echo "NOTION_PAGE: $NOTION_PAGE"
+          echo "duplicated_template_id: ${{ secrets.DUPLICATED_TEMPLATE_ID }}"
       - name: weread book sync
         run: |
           book
